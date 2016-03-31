@@ -1,0 +1,6 @@
+D:\GitRep\LinearEquations\LinearEquations\bin\Debug\LinearEquations.exe.config
+D:\GitRep\LinearEquations\LinearEquations\bin\Debug\LinearEquations.exe
+D:\GitRep\LinearEquations\LinearEquations\bin\Debug\LinearEquations.pdb
+D:\GitRep\LinearEquations\LinearEquations\obj\Debug\LinearEquations.csprojResolveAssemblyReference.cache
+D:\GitRep\LinearEquations\LinearEquations\obj\Debug\LinearEquations.exe
+D:\GitRep\LinearEquations\LinearEquations\obj\Debug\LinearEquations.pdb
