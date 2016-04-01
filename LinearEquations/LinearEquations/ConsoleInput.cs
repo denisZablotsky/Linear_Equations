@@ -4,7 +4,7 @@ namespace LinearEquations
 {
     public class ConsoleInput: IConsoleInput
     {
-        public int[,] ConsoleReadDate(out int size)
+        public double[,] ConsoleReadDate(out int size)
         {
             size = 0;
             bool flag = true;
@@ -23,7 +23,7 @@ namespace LinearEquations
                 else
                     Console.WriteLine("Not a number was entered.");
             }
-            int[,] array = new int[size, size + 1];
+            double[,] array = new double[size, size + 1];
             for (int i = 0; i < size; i++)
             {
                 for (int j = 0; j < size + 1; j++)
@@ -33,7 +33,7 @@ namespace LinearEquations
                     {
                         Console.WriteLine("Enter {0}:{1} coef:", i, j);
                         s = Console.ReadLine();
-                        if (int.TryParse(s, out array[i, j]))
+                        if (double.TryParse(s, out array[i, j]))
                             flag = false;
                         else
                             Console.WriteLine("Not a number was entered.");

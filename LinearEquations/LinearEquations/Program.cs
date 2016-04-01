@@ -8,7 +8,7 @@ namespace LinearEquations
         {
             int size = 0;
             IConsoleInput consoleInput = new ConsoleInput();
-            int[,] array = consoleInput.ConsoleReadDate(out size);
+            double[,] array = consoleInput.ConsoleReadDate(out size);
             Console.WriteLine(array[0, 0]);
             Console.ReadKey();
         }
