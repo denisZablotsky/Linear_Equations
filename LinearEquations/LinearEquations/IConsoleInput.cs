@@ -3,7 +3,7 @@ namespace LinearEquations
 {
     public interface IConsoleInput
     {
-        public static int[,] ConsoleReadDate(out int size);
+        int[,] ConsoleReadDate(out int size);
         /*
             Класс должен предоставлять статический метод для 
          * ввода данных с консоли. У пользователя спрашивают

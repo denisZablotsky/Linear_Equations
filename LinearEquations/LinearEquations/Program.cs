@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LinearEquations
 {
@@ -10,7 +6,11 @@ namespace LinearEquations
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Git");
+            int size = 0;
+            IConsoleInput consoleInput = new ConsoleInput();
+            int[,] array = consoleInput.ConsoleReadDate(out size);
+            Console.WriteLine(array[0, 0]);
+            Console.ReadKey();
         }
     }
 }
