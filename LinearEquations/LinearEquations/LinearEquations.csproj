@@ -43,9 +43,10 @@
   <ItemGroup>
     <Compile Include="ConsoleInput.cs" />
     <Compile Include="IConsoleInput.cs" />
-    <Compile Include="ISeidelsMethos.cs" />
+    <Compile Include="ISeidelsMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeidelsMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

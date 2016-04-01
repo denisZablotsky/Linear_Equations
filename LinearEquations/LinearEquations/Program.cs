@@ -8,8 +8,14 @@ namespace LinearEquations
         {
             int size = 0;
             IConsoleInput consoleInput = new ConsoleInput();
+            ISeidelsMethod seidel = new SeidelsMethod();
             double[,] array = consoleInput.ConsoleReadDate(out size);
-            Console.WriteLine(array[0, 0]);
+            double[] res = seidel.calculate(array, size);
+            Console.WriteLine("Results:");
+            for (int i = 0; i < res.Length; i++)
+            {
+                Console.Write(res[i] + " ");
+            }
             Console.ReadKey();
         }
     }
