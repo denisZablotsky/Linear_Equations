@@ -1,7 +1,7 @@
 ﻿
 namespace LinearEquations
 {
-    public interface ISeidelsMethos
+    public interface ISeidelsMethod
     {
         double[] calculate(double[,] array, int size);
         // Cтатический метод calculate принимает на вход
