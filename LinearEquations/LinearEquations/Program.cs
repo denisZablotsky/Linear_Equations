@@ -11,11 +11,7 @@ namespace LinearEquations
             ISeidelsMethod seidel = new SeidelsMethod();
             double[,] array = consoleInput.ConsoleReadDate(out size);
             double[] res = seidel.calculate(array, size);
-            Console.WriteLine("Results:");
-            for (int i = 0; i < res.Length; i++)
-            {
-                Console.Write(res[i] + " ");
-            }
+            
             Console.ReadKey();
         }
     }

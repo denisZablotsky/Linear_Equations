@@ -6,32 +6,46 @@ namespace LinearEquations
     {
         public double[] calculate(double[,] array, int size)
         {
-            double eps = 0.01;
+            double eps = 0.001;
             double[] results = new double[size];
-            bool flag = true;
-            double[] currentValues = new double[size];
-            while (flag)
+            double[] modifyedFreeValues = new double[size];
+            // Modification of matrix
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j <= size; j++)
+                {
+                    if (i != j)
+                        array[i, j] = array[i, j] / array[i, i];
+                    if (j == size)
+                        results[i] = array[i, j];
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+          
+            for (int q = 0; q < 6; q++)
             {
                 for (int i = 0; i < size; i++)
-                     results[i] = currentValues[i];
-                    currentValues = new double[size];
+                {
+                    modifyedFreeValues[i] = results[i];
+                    results[i] = 0;
+                }
                 for (int i = 0; i < size; i++)
                 {
-                    double var = 0;
-                    for (int j = 0; j < i; j++)
-                        var += (array[i, j] * currentValues[j]);
-                    for (int j = i + 1; j < size; j++)
-                        var += (array[i, j] * results[j]);
-                    currentValues[i] =(double)((array[i, size] - var) / array[i, i]);
+                    for (int j = 0; j < size; j++)
+                    {
+                        if (i != j)
+                            results[i] -= (array[i, j] * modifyedFreeValues[j]);
+                        else
+                            results[i] += modifyedFreeValues[j];
+                    }
                 }
-                double norm = 0;
                 for (int i = 0; i < size; i++)
-                    norm += Math.Abs(currentValues[i] - results[i]);
-                if (norm < eps)
-                    flag = false;  
+                    Console.Write(results[i] + " ");
+                Console.WriteLine("****");
             }
             return results;
         }
-       
+        
     }
 }
