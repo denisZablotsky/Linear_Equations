@@ -20,9 +20,18 @@ namespace LinearEquations
             printSystem(array, size);
 
             double[] res = seidel.calculate(array, size);
-            
+            printResults(res);
+
             Console.ReadKey();
            
+        }
+        static void printResults(double[] res)
+        {
+            Console.WriteLine("Answer: ");
+            for (int i = 0; i < res.Length; i++)
+            {
+                Console.Write("x{0} = {1}, ", (i + 1).ToString(), res[i].ToString());
+            }
         }
         static void printSystem(double[,] array, int size)
         {

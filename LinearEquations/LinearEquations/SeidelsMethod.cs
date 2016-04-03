@@ -18,9 +18,9 @@ namespace LinearEquations
                         array[i, j] = array[i, j] / array[i, i];
                     if (j == size)
                         results[i] = array[i, j];
-                    Console.Write(array[i, j] + " ");
+                    //Console.Write(array[i, j] + " ");
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
             }
           
             for (int q = 0; q < 6; q++)// должен быть while() но пока просто for на 6 итераций
@@ -40,9 +40,9 @@ namespace LinearEquations
                             results[i] += modifyedFreeValues[j];
                     }
                 }
-                for (int i = 0; i < size; i++)
-                    Console.Write(results[i] + " ");
-                Console.WriteLine("****");
+                //for (int i = 0; i < size; i++)
+                   // Console.Write(results[i] + " ");
+              //  Console.WriteLine("****");
             }
             return results;
         }
