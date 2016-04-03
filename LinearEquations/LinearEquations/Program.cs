@@ -7,7 +7,7 @@ namespace LinearEquations
         static void Main(string[] args)
         {
             int size = 0;
-            IConsoleInput consoleInput = new ConsoleInput();
+            IConsoleInput consoleInput = new FileInput();
             ISeidelsMethod seidel = new SeidelsMethod();
             double[,] array = consoleInput.ConsoleReadDate(out size);
             double[] res = seidel.calculate(array, size);

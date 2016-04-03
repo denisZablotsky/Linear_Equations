@@ -23,7 +23,7 @@ namespace LinearEquations
                 Console.WriteLine();
             }
           
-            for (int q = 0; q < 6; q++)
+            for (int q = 0; q < 6; q++)// должен быть while() но пока просто for на 6 итераций
             {
                 for (int i = 0; i < size; i++)
                 {
