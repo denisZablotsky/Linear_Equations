@@ -20,9 +20,16 @@ namespace LinearEquations
             int.TryParse(file.ReadLine(), out size);
             array = new double[size, size + 1];
             int i = 0;
+            int count = 0;
             while ((line = file.ReadLine()) != null && size != 0)
             {
                 string[] numbers = line.Split(' ');
+                count += numbers.Length;
+                if (count > size * (size + 1))
+                {
+                    size = 0;
+                    break;
+                }
                 for (int j = 0; j < numbers.Length; j++)
                 {
                     if (i < size && j <= size)
