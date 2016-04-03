@@ -17,10 +17,27 @@ namespace LinearEquations
             ISeidelsMethod seidel = new SeidelsMethod();
             while(size == 0)
                 array = consoleInput.ConsoleReadDate(out size);
+            printSystem(array, size);
+
             double[] res = seidel.calculate(array, size);
             
             Console.ReadKey();
            
+        }
+        static void printSystem(double[,] array, int size)
+        {
+            Console.WriteLine(" /");
+            for(int i = 0; i < size; i++)
+            {
+                Console.Write("| ");
+                for (int j = 0; j < size; j++)
+                    if (array[i, j] < 0 || j == 0)
+                        Console.Write("{0}x{1} ", array[i, j], (j + 1).ToString());
+                    else
+                        Console.Write("+ {0}x{1} ", array[i, j], (j + 1).ToString());
+                Console.WriteLine(" = " + array[i, size].ToString());
+            }
+            Console.WriteLine(" \\");
         }
     }
 }
